@@ -24,7 +24,7 @@ public class CheeseSearchStepDefinition {
 
     public CheeseSearchStepDefinition(){
         ChromeOptions options = new ChromeOptions();  
-        options.addArguments("--headless");
+        // options.addArguments("--headless");
         System.setProperty("webdriver.chrome.driver", ".//src//test//library//chromedriver.exe");
         this.driver = new ChromeDriver(options);
     }

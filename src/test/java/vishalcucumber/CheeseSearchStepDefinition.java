@@ -36,7 +36,8 @@ public class CheeseSearchStepDefinition {
 
     @When("I search for {string}")
     public void search_for(String query) {
-        System.out.println("query "+query);
+
+        System.out.println("-----------Query---------- "+query);
         
         WebElement element = driver.findElement(By.name("q"));
         // Enter something to search for

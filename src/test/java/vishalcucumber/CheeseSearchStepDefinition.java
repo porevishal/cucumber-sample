@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.cucumber.java.en.Given;
@@ -22,8 +23,10 @@ public class CheeseSearchStepDefinition {
     private WebDriver driver = null;
 
     public CheeseSearchStepDefinition(){
+        ChromeOptions options = new ChromeOptions();  
+        options.addArguments("--headless");
         System.setProperty("webdriver.chrome.driver", ".//src//test//library//chromedriver.exe");
-        this.driver = new ChromeDriver();
+        this.driver = new ChromeDriver(options);
     }
     
     @Given("I am on the Google search page")
